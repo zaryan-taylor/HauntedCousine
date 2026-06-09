@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5966537681346704050}
-  - component: {fileID: 1191768891399504255}
   - component: {fileID: 8999599553776694303}
   - component: {fileID: 8921281087153997470}
   - component: {fileID: 614033730831157371}
@@ -36,22 +35,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1191768891399504255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2394675337685042072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64eef8932ae995948a1d6ee5915eb947, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Dishleveler
-  nextPrefab: {fileID: 2394675337685042072}
-  caviar: {fileID: 2503411441810381006, guid: 0bff5296e01474e41a93f128984cad25, type: 3}
-  shrinkScale: 0.8
-  shrinkDuration: 0.1
 --- !u!114 &8999599553776694303
 MonoBehaviour:
   m_ObjectHideFlags: 0

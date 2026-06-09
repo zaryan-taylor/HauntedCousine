@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1408794508972648051}
   - component: {fileID: 2808931009018181386}
   - component: {fileID: 3797750435535773565}
-  - component: {fileID: 3109757493096039038}
   - component: {fileID: 8189115084682741134}
   m_Layer: 0
   m_Name: caviar
@@ -126,22 +125,6 @@ MonoBehaviour:
   minY: -4
   maxY: 4
   score: 0
---- !u!114 &3109757493096039038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2503411441810381006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64eef8932ae995948a1d6ee5915eb947, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Dishleveler
-  nextPrefab: {fileID: 2394675337685042072, guid: f1e32f0c88b4a5b49b52526c03e4d132, type: 3}
-  caviar: {fileID: 2503411441810381006}
-  shrinkScale: 0.8
-  shrinkDuration: 0.1
 --- !u!61 &8189115084682741134
 BoxCollider2D:
   m_ObjectHideFlags: 0

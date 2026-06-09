@@ -3,7 +3,8 @@ using System.Collections;
 public class Dishleveler : MonoBehaviour
 {
     public static ScoreManager Instance;
-    public GameObject nextPrefab;
+    public GameObject cookie;
+    public GameObject chicken;
     public GameObject caviar;
 
 
@@ -23,16 +24,7 @@ public class Dishleveler : MonoBehaviour
 
         ScoreManager.Instance.AddScore(1);
         StartCoroutine(ClickEffect());
-        if (ScoreManager.Instance.score == 10)
-        {
-            Instantiate(
-                nextPrefab,
-                transform.position,
-                Quaternion.identity
-            );
-            Debug.Log("new object");
-            Destroy(gameObject);
-        }
+        
         if (ScoreManager.Instance.score == 25)
         {
             Instantiate(
@@ -51,5 +43,33 @@ public class Dishleveler : MonoBehaviour
 
         transform.localScale = originalScale;
     }
+    public void SwapToChicken()
+    {
+        if (ScoreManager.Instance.score >= 10)
+        {
+            // Remove 25 score
+            ScoreManager.Instance.score -= 10;
+
+            // Spawn chicken
+            Instantiate(
+                 chicken,
+                 transform.position,
+                 Quaternion.identity
+             );
+            Debug.Log("new object");
+            Destroy(cookie);
+        
+            Debug.Log("Upgraded to Chicken!");
+
+            
+        }
+        else
+        {
+            Debug.Log($"Not enough score, need { 25 - ScoreManager.Instance.score}");
+        }
+    }
+
+
+
 
 }

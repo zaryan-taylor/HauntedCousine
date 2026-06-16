@@ -16,14 +16,17 @@ public class DishMovement : MonoBehaviour
 
     [Header("Score")]
     public int score = 0;
+    public float shrinkScale = 0.8f;   // 80% of original size
+    public float shrinkDuration = 0.1f;
+    private Vector3 originalScale;
 
-   
+
 
 
 
     private void Start()
     {
-       
+        originalScale = transform.localScale;
         StartCoroutine(TeleportRoutine());
     }
 
@@ -40,6 +43,20 @@ public class DishMovement : MonoBehaviour
         }
     }
 
-    
+    private void OnMouseDown()
+    {
+
+        ScoreManager.Instance.AddScore(1);
+        StartCoroutine(ClickEffect());
+
+    }
+    private IEnumerator ClickEffect()
+    {
+        transform.localScale = originalScale * shrinkScale;
+
+        yield return new WaitForSeconds(shrinkDuration);
+
+        transform.localScale = originalScale;
+    }
 
 }
